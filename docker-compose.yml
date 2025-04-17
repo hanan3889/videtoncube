@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "9000:80"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    container_name: videtoncube-web
+
+  db:
+    image: mysql:8.0
+    restart: always
+    container_name: videtoncube-db
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3307:3306"
+    env_file:
+      - .env
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./log.sql:/docker-entrypoint-initdb.d/log.sql 
+
+volumes:
+  db-data:
+
