@@ -15,7 +15,7 @@ ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 
 # Reconfigure Apache pour que le DocumentRoot soit 'public'
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf \
- && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
+    && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 
 # Donne les bons droits au dossier 
 RUN chown -R www-data:www-data /var/www/html
