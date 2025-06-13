@@ -21,7 +21,18 @@ Assure-toi d’avoir installé :
 
 ```bash
 git clone git@github.com:hanan3889/videtoncube.git
-cd videtoncube
-
 ````
-### 3. Créer un fichier .env
+```bash
+cd videtoncube
+````
+### 3. Créer un fichier .env.dev et .env.prod
+
+### 4. Exécuter les scripts pour démarrer les conteneurs de PROD et DEV
+
+```bash
+./start-prod.sh
+```` 
+
+```bash
+./start-dev.sh
+```` 
