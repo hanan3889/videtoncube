@@ -5,10 +5,12 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
--- Création de la base de données
-DROP DATABASE IF EXISTS videtoncube;
-CREATE DATABASE videtoncube CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE videtoncube;
+
+-- CREATE USER IF NOT EXISTS 'bloc'@'%' IDENTIFIED BY 'C3si'; 
+-- GRANT ALL PRIVILEGES ON videtoncube.* TO 'bloc'@'%';
+-- FLUSH PRIVILEGES;
+
+
 
 -- Création de la table des utilisateurs
 CREATE TABLE IF NOT EXISTS users (
@@ -29,11 +31,10 @@ CREATE TABLE IF NOT EXISTS objets (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
     prix DECIMAL(10,2) NOT NULL,
-    image VARCHAR(255), 
+    image VARCHAR(255),
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 -- Insertion des objets
 INSERT INTO objets (nom, prix, image, user_id) VALUES
