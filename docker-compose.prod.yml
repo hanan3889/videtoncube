@@ -10,8 +10,6 @@ services:
     env_file:
       - .env.prod
     container_name: vide-ton-cube-web-prod
-    volumes:
-      - .:/var/www/html
     environment: 
       APP_ENV: ${APP_ENV}
       DB_CONNECTION: ${DB_CONNECTION}
