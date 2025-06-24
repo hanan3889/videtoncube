@@ -25,6 +25,19 @@ try {
     ");
 
     echo "<h1>Liste des objets en vente</h1><ul>";
+    echo "<div style=\"text-align: center;\">
+        <input type=\"text\" id=\"searchInput\" placeholder=\"Rechercher un objet...\" style=\"margin-bottom: 20px; padding: 5px; width: 300px;\">
+        </div>";
+    echo "<script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            document.querySelectorAll('ul > li').forEach(function(item) {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? '' : 'none';
+            });
+        });
+    </script>";
+
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $vendeur = $row['vendeur'] ? htmlspecialchars($row['vendeur']) : "Anonyme";
         $imagePath = $row['image'] ? "images/" . htmlspecialchars($row['image']) : "images/default.jpg";
