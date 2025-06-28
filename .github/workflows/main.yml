@@ -1,0 +1,22 @@
+name: Check Secrets
+on:
+  pull_request:
+    branches: [ develop ]
+jobs:
+  check-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if secrets are set
+        run: |
+          if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then
+            echo "DOCKER_USERNAME secret is not set"
+            exit 1
+          else
+            echo "DOCKER_USERNAME secret is set"
+          fi
+          if [ -z "${{ secrets.DOCKER_PASSWORD }}" ]; then
+            echo "DOCKER_PASSWORD secret is not set"
+            exit 1
+          else
+            echo "DOCKER_PASSWORD secret is set"
+          fi
