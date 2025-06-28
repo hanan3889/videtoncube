@@ -2,21 +2,32 @@ name: Check Secrets
 on:
   pull_request:
     branches: [ develop ]
+
 jobs:
   check-secrets:
     runs-on: ubuntu-latest
+    env:
+      MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+      MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
     steps:
       - name: Check if secrets are set
         run: |
-          if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then
-            echo "DOCKER_USERNAME secret is not set"
+          if [ -z "${{ secrets.MYSQL_PASSWORD }}" ]; then
+            echo "MYSQL_PASSWORD secret is not set"
             exit 1
           else
-            echo "DOCKER_USERNAME secret is set"
+            echo "MYSQL_PASSWORD secret is set"
           fi
-          if [ -z "${{ secrets.DOCKER_PASSWORD }}" ]; then
-            echo "DOCKER_PASSWORD secret is not set"
+          if [ -z "${{ secrets.MYSQL_ROOT_PASSWORD }}" ]; then
+            echo "MYSQL_ROOT_PASSWORD secret is not set"
             exit 1
           else
-            echo "DOCKER_PASSWORD secret is set"
+            echo "MYSQL_ROOT_PASSWORD secret is set"
+          fi
+          if [ -z "${{ secrets.DB_PASSWORD }}" ]; then
+            echo "DB_PASSWORD secret is not set"
+            exit 1
+          else
+            echo "DB_PASSWORD secret is set"
           fi
