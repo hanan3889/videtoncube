@@ -1,8 +1,7 @@
 services:
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: hanandi/videtoncube-prod:latest
+    pull_policy: always
     ports:
       - "${APP_PORT}:80"
     depends_on:
