@@ -67,3 +67,46 @@ li .price {
     color: #28a745;
     margin-top: 5px;
 }
+
+/* Dark theme styles */
+html.dark-theme body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+html.dark-theme h1 {
+    color: #e0e0e0;
+}
+
+html.dark-theme li {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-theme strong {
+    color: #bb86fc;
+}
+
+html.dark-theme em {
+    color: #b0b0b0;
+}
+
+html.dark-theme li .price {
+    color: #03dac6;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    margin: 5px;
+}
+
+html.dark-theme #theme-toggle {
+    color: #fff;
+}

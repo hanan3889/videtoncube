@@ -6,12 +6,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
--- CREATE USER IF NOT EXISTS 'bloc'@'%' IDENTIFIED BY 'C3si'; 
--- GRANT ALL PRIVILEGES ON videtoncube.* TO 'bloc'@'%';
--- FLUSH PRIVILEGES;
-
-
-
 -- Création de la table des utilisateurs
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,

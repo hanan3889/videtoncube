@@ -1,12 +1,17 @@
 # 🧊 Videtoncube
 
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/hanan3889/videtoncube/main.yml?style=for-the-badge&logo=githubactions&logoColor=white)
+
 Plateforme simple de vente d’objets d’occasion. Développée en PHP avec MySQL, orchestrée via Docker.
 
 ## 📦 Stack Technique
 
 - PHP (Apache)
 - MySQL 8.0
-- Docker & Docker Compose
+- Docker & Docker Compose 
 
 ## 🚀 Démarrage rapide
 
@@ -36,3 +41,20 @@ cd videtoncube
 ```bash
 ./start-dev.sh
 ```` 
+
+### 5. Pour arrêter les conteneurs
+
+```bash
+./stop-prod.sh
+````
+
+```bash
+./stop-dev.sh
+```` 
+
+## ✨ Contributeurs
+
+- Gaelle
+- Hanan
+- Thoms
+- Louis
