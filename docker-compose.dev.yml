@@ -15,8 +15,8 @@ services:
     environment:
       APP_ENV: ${APP_ENV}
       DB_HOST: ${DB_HOST}
-      DB_DATABASE: ${DB_DATABASE}
-      DB_USERNAME: ${DB_USERNAME}
+      DB_NAME: ${DB_DATABASE}
+      DB_USER: ${DB_USERNAME}
       DB_PASSWORD: ${DB_PASSWORD}
       DB_PORT: ${DB_PORT}
 
