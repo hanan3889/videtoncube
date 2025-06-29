@@ -6,7 +6,7 @@ Plateforme simple de vente d’objets d’occasion. Développée en PHP avec MyS
 
 - PHP (Apache)
 - MySQL 8.0
-- Docker & Docker Compose
+- Docker & Docker Compose 
 
 ## 🚀 Démarrage rapide
 
