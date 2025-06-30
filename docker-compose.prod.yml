@@ -1,6 +1,6 @@
 services:
   web:
-    image: hanan3889/videtoncube-prod:latest
+    build: .
     pull_policy: always
     ports:
       - "${APP_PORT}:80"
