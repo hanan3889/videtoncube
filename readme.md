@@ -56,5 +56,5 @@ cd videtoncube
 
 - Gaelle
 - Hanan
-- Thoms
+- Thomas
 - Louis

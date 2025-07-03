@@ -110,3 +110,31 @@ html.dark-theme li .price {
 html.dark-theme #theme-toggle {
     color: #fff;
 }
+
+/* Footer styles */
+.main-footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+html.dark-theme .main-footer {
+    color: #aaa;
+}
+
+.footer-hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+html.dark-theme .footer-hr {
+    background-color: #555;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}

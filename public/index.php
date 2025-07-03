@@ -77,4 +77,8 @@
     applyTheme();
 </script>
 
+    <hr class="footer-hr">
+    <footer class="main-footer">
+        <p>&copy; <?php echo date('Y'); ?> Vide ton Cube !</p>
+    </footer>
 </body>
